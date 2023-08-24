@@ -1,0 +1,50 @@
+.pallet {
+	width: 1000px;
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	gap: 3px;
+	margin-top: 2em;
+}
+
+.pallet div {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pallet div:nth-child(1) {
+	background-color: color-mix(in oklab, var(--clr-base) 30%, white);
+}
+
+.pallet div:nth-child(2) {
+	background-color: color-mix(in oklab, var(--clr-base) 50%, white);
+}
+
+.pallet div:nth-child(3) {
+	background-color: color-mix(in oklab, var(--clr-base) 70%, white);
+}
+
+.pallet div:nth-child(4) {
+	background-color: color-mix(in oklab, var(--clr-base) 90%, white);
+}
+
+.pallet div:nth-child(5) {
+	background-color: var(--clr-base);
+}
+
+.pallet div:nth-child(6) {
+	background-color: color-mix(in oklab, var(--clr-base) 90%, black);
+}
+
+.pallet div:nth-child(7) {
+	background-color: color-mix(in oklab, var(--clr-base) 70%, black);
+}
+
+.pallet div:nth-child(8) {
+	background-color: color-mix(in oklab, var(--clr-base) 50%, black);
+}
+
+.pallet div:nth-child(9) {
+	background-color: color-mix(in oklab, var(--clr-base) 30%, black);
+}
