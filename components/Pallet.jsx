@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Pallet.module.css"
+import styles from "./Pallet.module.css";
 
 const Pallet = () => {
 	return (
