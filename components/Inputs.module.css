@@ -1,7 +1,6 @@
 .colorInput {
 	display: flex;
 	justify-content: space-around;
-	margin-top: 3em;
 }
 
 .colorInput div {

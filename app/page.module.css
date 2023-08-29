@@ -1,10 +1,9 @@
-.heading {
-	margin: 1em 0;
-	font-size: 3.5rem;
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
 }
 
-@media screen and (max-width: 768px) {
-	.heading {
-		font-size: 2rem;
-	}
+.heading {
+	font-size: 3.5rem;
 }
