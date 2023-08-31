@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Color Pallet',
-  description: 'Color pallet using color-mix with oklab in CSS.',
+  description: 'Color pallet using color-mix with different methods in CSS.',
 }
 
 export default function RootLayout({ children }) {

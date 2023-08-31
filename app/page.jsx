@@ -1,12 +1,13 @@
-import { Inputs, Pallet } from "@/components";
+import { Inputs, Pallet, Navbar, Attribution } from "@/components";
 import styles from "./page.module.css";
 
 export default function Home() {
 	return (
 		<main className={styles.main}>
-			<h1 className={styles.heading}>Color Pallet</h1>
+			<Navbar />
 			<Inputs />
 			<Pallet />
+			<Attribution />
 		</main>
 	);
 }

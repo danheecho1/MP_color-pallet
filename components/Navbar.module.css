@@ -1,0 +1,20 @@
+.navContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: 2.75rem;
+	font-weight: 600;
+}
+
+.navMenu {
+	display: flex;
+	gap: 1.5em;
+	align-items: center;
+}
+
+.navMenu li a:hover {
+	color: rgb(100, 100, 100);
+}

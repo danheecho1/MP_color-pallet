@@ -1,14 +1,34 @@
-.colorInput {
-	display: flex;
-	justify-content: space-around;
-}
-
-.colorInput div {
-	display: flex;
-	flex-direction: column;
+.inputContainer {
+	display: grid;
+	grid-template-columns: 1fr 9fr;
 	gap: 1em;
+	padding: 2em;
 }
 
-.colorInput div input {
+.inputContainer__main {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.inputContainer__main div {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	border: none;
+}
+
+.inputContainer__main div input {
 	width: max(5vw, 100px);
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 0.25em 0.5em;
+	text-align: center;
+}
+
+.randomize{
+	height: fit-content;
+	padding: 0.375em 1em;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
 }
