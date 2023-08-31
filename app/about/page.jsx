@@ -16,7 +16,7 @@ const page = () => {
 			<div>
 				<p>
 					As an aspiring front-end developer, I enjoy watching Kevin
-					Powell's videos on YouTube. A few days ago, I came across
+					Powell&apos;s videos on YouTube. A few days ago, I came across
 					one about color-mix() and saw the pretty colors he made by
 					mixing different ratios of a base color with white and
 					black. It seemed simple enough, so I made one myself.{" "}
