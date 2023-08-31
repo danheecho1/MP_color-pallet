@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Color Pallet
 
-## Getting Started
+## Intro
+This project was inspired by [Kevin Powell's YouTube video](https://youtu.be/I9zHX-jSKpA?si=s2XEPEXCrI9APIni) on color-mix(). It takes an input of RGB values, and displays a range of lighter and darker colors based on the input color provided. The colors are created using 8 different color interpolation methods - 4 of which are based on rectangular color spaces, and the rest based on polar color spaces. 
 
-First, run the development server:
+## Built with
+This project was built using React/Next and plain CSS. I wish I used something other than Next (maybe Svelte or Astro?) since the project really doesn't have much going on, and SCSS. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## How the colors are made
+I take no credit for how the colors are created - it's the same lines of codes as Kevin's. I tried playing with different ratios of mixes and different color mixes, but nothing came out as good as his. 
+
+There are 9 columns of colors. The fifth one in the middle is the base color that is specified (or randomly chosen) at the top of the page. The colors to the left of the base color are mixed with white, and the right with black. Colors closest to the base color have a mix ratio of 90% base to 10% mix. The next set of colors has 70% to 30%. The next set has an even 50% to 50%, and the last set has 30% base to 70% mix. 
+
+Each row uses different color interpolation method to apply different mix ratios described above. Some base colors work better than others, and some methods work better with certain base colors than others. For example, try (193, 95, 155) and see how the color pallets are similar across all methods. hsl seems a bit different from the rest, but it's nothing crazy. Then, try (74, 231, 234) and  wonder how different shades of teal turns purple, navy, pink, or even greenish yellow. 
+
+Anyhow, here is an example of the CSS code for creating these colors: 
+```css
+#srgb .colorsDiv div:nth-child(1) {
+	background-color: color-mix(in srgb, var(--clr-base) 30%, white);
+}
+
+#srgb .colorsDiv div:nth-child(2) {
+	background-color: color-mix(in srgb, var(--clr-base) 50%, white);
+}
+
+#srgb .colorsDiv div:nth-child(3) {
+	background-color: color-mix(in srgb, var(--clr-base) 70%, white);
+}
+
+#srgb .colorsDiv div:nth-child(4) {
+	background-color: color-mix(in srgb, var(--clr-base) 90%, white);
+}
+
+#srgb .colorsDiv div:nth-child(5) {
+	background-color: var(--clr-base);
+}
+
+#srgb .colorsDiv div:nth-child(6) {
+	background-color: color-mix(in srgb, var(--clr-base) 90%, black);
+}
+
+#srgb .colorsDiv div:nth-child(7) {
+	background-color: color-mix(in srgb, var(--clr-base) 70%, black);
+}
+
+#srgb .colorsDiv div:nth-child(8) {
+	background-color: color-mix(in srgb, var(--clr-base) 50%, black);
+}
+
+#srgb .colorsDiv div:nth-child(9) {
+	background-color: color-mix(in srgb, var(--clr-base) 30%, black);
+}
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

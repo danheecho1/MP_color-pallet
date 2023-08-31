@@ -1,0 +1,15 @@
+.aboutContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 5em;
+	align-items: center;
+	margin-top: 2em;
+}
+
+.aboutContainer div {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	text-align: left;
+	line-height: 1.75em;
+}
